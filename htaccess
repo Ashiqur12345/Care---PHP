@@ -1,0 +1,7 @@
+ErrorDocument 404 http://care.epizy.com/?msg=Page not found&msgtype=warning
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ <YourRelativePathToPHPFile>/404.php [L]

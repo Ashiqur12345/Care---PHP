@@ -1,0 +1,111 @@
+@font-face {
+    font-family: neuropol;
+    src: url(../Fonts/NEUROPOL.ttf);
+}
+
+.logo{
+    padding-top: 15%
+}
+
+.logo > .logoname, .logo > .logovision {
+    font-family: neuropol;
+    color: rgba(133, 2, 2, 0.65);
+}
+
+.logo > .logoname {
+    font-size: 100px
+}
+
+.logo > .logovision {
+    font-size: 35px
+}
+
+.gap{
+    background-color: rgba(255, 255, 255, 0); 
+    min-height: 50px
+}
+
+.pane{
+    background-color: rgba(125, 125, 125, 0.5);
+}
+
+/* .card-holder{
+    padding: 1em 1em 1em 1em;
+} */
+
+.card-holder a .emergency{
+    color: tomato;
+}
+
+.card-holder a .bot{
+    color: black;
+}
+
+.card-holder a .doctor{
+    color: green;
+}
+
+.card-holder a .aid{
+    color: red;
+}
+
+.card-holder a .history{
+    color: blueviolet;
+}
+
+.card-holder .card-header{
+    font-size: 40px;
+    color: darkcyan
+}
+
+/*Smiley bot styling*/
+.chat-window{
+    padding: 5px 5px 10vh 5px;
+    /* background-color: cadetblue; */
+    border-radius: 5px;
+    border: 2px solid cadetblue;
+    height: 60vh;
+    overflow: scroll;
+}
+
+.chat-window>.question, .chat-window>.reply{
+    max-width: 320px;
+    min-width: 320px;
+}
+
+.chat-window>.question{
+    text-align: left;
+    float: left;
+    clear: both;
+    
+}
+.chat-window>.reply{
+    text-align: right;
+    float: right;
+    clear: both;
+}
+
+span.matched{
+    color: green;
+}
+
+
+span.mismatched{
+    color: red;
+}
+
+/*Preventing modal blackness*/
+body.modal-open div.modal-backdrop { 
+    z-index: 0;  
+}
+
+/*Temporary styles*/
+#bottom-div{
+    /* position: fixed;
+    bottom: 4%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%; */
+    display: none;
+}
+/*End smiley bot styling*/

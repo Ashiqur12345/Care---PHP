@@ -1,0 +1,214 @@
+<html>
+<head onload="hello();">
+    <title>Care</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="./Contents/Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./Contents/Styles/mystyle.css">
+    <script src="./Contents/Scripts/_jquery.js"></script>
+    <script src="./Contents/Scripts/_bootstrap.min.js"></script>
+    <script src="./Contents/Scripts/_bootstrap-notify.min.js"></script>
+    <style>
+        .custom-div{
+            background-color: rgb(60, 214, 219);
+            min-height: 290px;
+            padding-top: 15px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: large;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<!--Header -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <img class="img-rounded" src="./Contents/Images/logo2.png" width="250px">
+            </div>
+
+            <div class="col-md-9 text-center">
+                <div class="logoh1"><h1>Care</h1></div>
+                <p class="logoh1">Healthcare for Everyone</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Navigation bar -->
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
+        <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-default active"><span class="glyphicon glyphicon-home"></span> Home</a>
+
+            <div class="btn-group dropdown">
+                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tasks"></span> Services <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#bot">Smiley Bot</a></li>
+                    <li><a href="#ocr">Medical OCR</a></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+
+            <a href="#about" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"></span> About</a>
+            <a href="#contact" class="btn btn-default"><span class="glyphicon glyphicon-earphone"></span> Contact</a>
+        </div>
+    </div>
+</div>
+
+<div>&nbsp;</div>
+
+<!--Body texts -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="custom-div">
+                        <h1>Electronic Healthcare</h1>
+                        <p>
+                            Care is an electronic healthcare paltform with the goal of making healthcare faster, cheaper and closer to mass people.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <a href="/Contents/Images/dna.jpg">
+                                <img class="img-responsive img-rounded" src="./Contents/Images/dna.jpg">
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="/Contents/Images/bot.jpg">
+                                        <img class="img-responsive img-rounded" src="./Contents/Images/bot.jpg">
+                                    </a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a href="/Contents/Images/healthcare-icon2.png">
+                                        <img class="img-responsive img-rounded" src="./Contents/Images/healthcare-icon2.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center"><b>Site Login</b></div>
+                        <div class="panel-body">
+                            <form onsubmit="return(handleSignin(event))" action="#" method="POST" name="signinform">
+                                <div class="form-group">
+                                    <label for="email">Email address:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required pattern="[A-Za-z0-9_.]+@[A-Za-z0-9_.]+\.[A-Za-z0-9_]+">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass">Password:</label>
+                                    <input type="password" class="form-control" id="pass" name="pass" required>
+                                </div>
+                                <!-- <div class="checkbox">
+                                    <label><input type="checkbox"> Remember me</label>
+                                </div> -->
+                                <button type="submit" class="btn btn-default">Sign In</button>
+                                <div class="text-right">New to this site? Register <a href="register.php">here</a>.</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item disabled text-center"><b>Latest News</b></li>
+                        <li class="list-group-item"><a class="btn btn-link" href="#">New era in medical science.</a></li>
+                        <li class="list-group-item"><a class="btn btn-link" href="#">PRES predicts AtoI better than ever.</a></li>
+                        <li class="list-group-item"><a class="btn btn-link" href="#">New clinical vaccine for cancer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<div class="row">
+    <footer class="col-md-12 text-center">
+        &NewLine;
+        <strong>Copyright Protected</strong> <span class="glyphicon glyphicon glyphicon-copyright-mark"></span>
+        <a href="mailto:ashiqur12345@gmail.com?Subject=Hello" target="_top">Ashiqur Rahman</a>
+    </footer>
+</div>
+
+
+<button onclick="hello();">adsa</button>
+<script>
+        function handleSignin(event){
+            event.target[2].innerText = "Signing in..";
+            let mail = document.forms['signinform'][0].value;
+            let pass = document.forms['signinform'][1].value;
+    
+            if(mail != null && pass != null) {
+               
+                let data = new FormData();
+                data.append('email', mail);
+                data.append('password', pass);
+                
+                let xhttp=new XMLHttpRequest();
+    
+                xhttp.addEventListener("progress", function(evt){/*showPleaseWait();*/});
+                xhttp.addEventListener("load", function(evt){console.log("load",evt);});
+                xhttp.addEventListener("error", function(){console.log("error",evt);});
+                xhttp.addEventListener("abort", function(){console.log("abort",evt);});
+                        
+                xhttp.open('POST','signin.php',true);
+                xhttp.send(data);
+                xhttp.onreadystatechange=function(){
+                    //hidePleaseWait();
+                    if(this.readyState==4 && this.status==200){
+                        console.log(this.responseText);
+                        let obj = JSON.parse(this.responseText);
+                        if(obj.authenticate){
+                            window.location = "home.php";
+                        }
+                        else{
+                            event.target[2].innerText = "Sign In";
+                            $.notify({
+                                title: "<b>Error!</b>",
+                                message: "Sign in failed"
+                            },{
+                                type: 'danger',
+                            });
+                        }
+                        
+                    }
+                }
+            }
+            
+            return false;
+        }
+    </script>
+
+</body>
+</html>
+
+<script>
+
+function hello(){
+    for (var iLoop = 0; iLoop < 5; iLoop++) {
+        $.notify({
+            title: "<b>Welcome:</b>",
+            message: "This plugin has been provided to you by Robert McIntosh aka mouse0270"
+        },{
+            type: 'danger',
+        });
+    }
+}
+
+</script>

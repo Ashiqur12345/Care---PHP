@@ -1,0 +1,22 @@
+1. Each php file contains
+    $_GET['msg']
+    $_GET['msgtype']
+2. Register and Signin will also have
+    $_GET['rdrurl']
+3. Ajax return object must contains
+    {
+        msg: "",
+        msgtype: "",
+        rdrurl: ""
+        other1: val,
+        other2: val,
+        ...:...
+    }
+4.  Tasks
+    1. User login, registration [done]
+    2. Chat bot symptom disease detection [done]
+    3. Disease related doctors list suggest [done]
+    4. Primary treatment suggestion [done]
+    5. Admin new symptom add doctor database manual [done]
+
+5. Beautify index [done]

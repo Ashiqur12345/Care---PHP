@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Care</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Contents/Styles/mystyle.css">
+
+    <style>
+      body{
+        height: 100vh; 
+        background-color: rgba(223, 131, 12, 0.808);
+        background-image: url(img/bg.png); 
+        background-attachment: fixed; 
+        background-position-x: center; 
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .myButton {
+        width: 200px;
+        -moz-box-shadow: 5px 4px 7px 2px #899599;
+        -webkit-box-shadow: 5px 4px 7px 2px #606161;
+        box-shadow: 0px 5px 7px 0px #8995998a;
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+        background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+        background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+        background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+        background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+        background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+        background-color:#ededed;
+        -moz-border-radius:17px;
+        -webkit-border-radius:17px;
+        border-radius:17px;
+        border:1px solid #d6bcd6;
+        display:inline-block;
+        cursor:pointer;
+        color: rgba(133, 2, 2, 0.65);
+        font-family:neuropol;
+        font-size:28px;
+        padding:7px 25px;
+        text-decoration:none;
+        text-shadow:0px 10px 50px #eb671096;
+      }
+      .myButton:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+        background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+        background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+        background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+        background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+        background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+        background-color:#bab1ba;
+      }
+      .myButton:active {
+        position:relative;
+        top:1px;
+      }
+    </style>
+ 
+  </head>
+
+  <body onload="checkAuth();">
+
+    <div style="height: 50vh;">
+
+        <div class="text-center logo">
+            <div class="logoname">Care</div>
+            <div class="logovision">Healthcare for Everyone</div>
+        </div>
+
+    </div>
+
+
+    <section class="pane" style="height: 50vh;">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col col-lg-12" style="margin-top: 25%">
+              <button onclick="window.location='signin.php';" class="myButton">Sign in</button>
+              <button onclick="window.location='register.php';" class="myButton">Join</button>
+            </div>
+              
+          </div>
+        </div>
+      </section>
+
+    <div class="gap"></div>
+
+    <section class="pane">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/emergency.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Medical Emergency</h2>
+              <p>Instant emergency services</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <section class="pane">
+    <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/bot.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Smiley Bot</h2>
+              <p>Preliminary disease detection from feelings and symptoms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <section class="pane">      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/fd.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Find Doctor</h2>
+              <p>Find appropriate doctors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <section class="pane">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/kit.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">First Aid Kit</h2>
+              <p>Buy first aid kits to tackle emergency situations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <section class="pane">
+        <div class="container">
+            <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                <img class="img-fluid rounded-circle" src="img/lifeline.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                <h2 class="display-4">Lifeline</h2>
+                <p>Store and manage your medical records</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="gap"></div>
+
+    <!--Footer-->
+    <div class="row pane">
+        <footer class="col-md-12 text-center">
+            <strong>Copyright Protected</strong> <span class="glyphicon glyphicon glyphicon-copyright-mark"></span>
+            <a href="mailto:ashiqur12345@gmail.com?Subject=Hello" target="_top">Ashiqur Rahman</a>
+        </footer>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+  <script>
+
+    
+    function checkAuth() {
+        if( (document.cookie.match(/^(?:.*;)?\s*auth\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1] ){
+          window.location = "home.php";
+        }
+    }
+  </script>
+
+</html>
